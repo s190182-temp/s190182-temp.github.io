@@ -1,0 +1,235 @@
+/* * {outline: 1px dashed black} */
+/* html, body {margin: 0; padding: 0} */
+
+
+body {
+    font-family: JetBrains Mono;
+    font-size: 14px;
+
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+
+}
+
+
+main {
+    text-align: justify;
+    color: var(--nord0);
+
+    max-height: 70%;
+    margin: 0 20% 100px;
+}
+
+/*** MAIN ***/
+
+section {
+    padding-top: 70px;
+}
+h2 {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+h3 {
+    padding-top: 58px;
+}
+
+/* CODE */
+.code-block {
+    background-color: var(--nord6);
+    border-radius: 7px;
+
+    padding: 10px;
+    margin: 10px 0;
+    overflow-x: auto;
+}
+
+ul {
+    list-style-type: square;
+}
+
+code {
+    font-family: Fira Code, monospace;
+    
+    background-color: var(--nord6);
+    border-radius: 3px;
+}
+
+
+a {color: var(--nord14);}
+a:visited {color: var(--nord15);}
+.hyperlink::before {
+    content: "🔗";
+    font-size: 70%; 
+}
+
+
+
+
+
+/*** NAVIGATION BAR ***/
+#navbar {
+    display: block;
+
+    background-color: var(--nord3);
+    box-shadow: 0 1px 5px var(--nord1);
+    color: var(--nord7);
+
+    position: fixed;
+    top: 0;
+    padding: 5px 0;
+    width: 100%;
+}
+
+#navbar ul {
+    list-style-type: none;
+}
+
+#navbar ul li {
+    display: table-cell;
+}
+
+#navbar .redirector {
+    padding: 0 30px;
+
+    border-bottom: 3px solid var(--nord1);
+    border-left: 3px solid var(--nord7);
+    border-top: 1px solid var(--nord1);
+    border-right: 1px solid var(--nord1);
+}
+#navbar .redirector:hover {
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top: none;
+    border-right: none;
+}
+.redirector a, a:visited {
+    color: var(--nord7);
+    text-decoration: none;
+}
+
+#symbol {
+    border: none;
+    padding-right: 40px;
+}
+
+
+
+/*** TITLE ***/
+header {
+    color: var(--nord8);
+    font-size: 24px;
+    background-image: url('/images/code-background.png');
+    background-attachment: fixed;
+
+    /* width: 100%;z */
+    padding: 200px 50px;
+    /* margin-bottom: 200px; */
+}
+
+/* The hidden message in the asterick */
+#disclaimer {
+    display: inline-block;
+    width: 300px;
+    font-size: 15px;
+    vertical-align: top;
+    line-height: 0.7;
+}
+#disclaimer:hover::before {
+    font-size: 8px;
+    content: "yes, the content is all over the place and the topic doesn't make sense, but this is html/css project anyways so please don't judge(at least not the title)";
+}
+#disclaimer:hover span {display: none;}
+
+
+
+/*** SIDEBAR ***/
+#sidebar {
+    position: sticky;
+    top: 15%;
+    float: left;
+    /* height: 100%; */
+    width: 20%;
+    /* text-align: center; */
+}
+
+#sidebar > ul {
+    list-style-type: none;
+    border-top:  5px dashed var(--nord9); 
+    color: var(--nord9);
+
+    width: 60%;
+    padding: 10px;
+    margin-left: 10%;
+}
+
+#sidebar > ul > li {
+    margin: 5px 0;
+}
+#sidebar ul li a:any-link {
+    text-decoration: none;
+    color: var(--nord0);
+}
+
+
+
+#resources ul li, #credits ul li {
+    margin: 10px 0;
+}
+
+
+footer {
+    position: relative;
+
+    background-color: var(--nord3);
+    color: var(--nord5);
+
+    width: 100%;
+    padding: 5px 20px;
+}
+
+
+
+
+/* Color Scheme */
+:root {
+
+
+    /* https://www.nordtheme.com/ */
+
+    /* Light: plain text    Dark: background */
+    --nord0: #2E3440;
+    /* Light: subtle UI/focused elem    Dark: prominent UI, borders */
+    --nord1: #3B4252;
+    /* Light&Dark:  brighter nord1    Dark: selection, highlight */
+    --nord2: #434C5E;
+    /* Light: next to nord1/2, subtle UI    Dark: indent, comments */
+    --nord3: #4C566A;
+
+    /* Bright -> Dark, nord6 as base, nord4/5 as hightlight */
+    /* Light: prominent UI, borders    Dark: caret */
+    --nord4: #D8DEE9;
+    /* Light: current active, selection    Dark: subtle UI/focused elem */
+    --nord5: #E5E9F0;
+    /* Light: background    Dark: eleevated UI */
+    --nord6: #ECEFF4;
+
+    /* next to nord8, stand out for attention */
+    --nord7: #8FBCBB;
+    /* primary UI, most visual attention */
+    --nord8: #88C0D0;
+    /* secondary UI, more attention */
+    --nord9: #81A1C1;
+    /* tertiary UI, more attention */
+    --nord10: #5E81AC;
+
+    --nord11: #BF616A;
+    --nord12: #D08770;
+    --nord13: #EBCB8B;
+    --nord14: #A3BE8C;
+    --nord15: #B48EAD;
+}
